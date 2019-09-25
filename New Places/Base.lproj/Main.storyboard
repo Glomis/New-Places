@@ -136,7 +136,10 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="name of place" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ajt-8z-SN5">
                                                             <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="dvt-tn-VZZ" id="kVk-VP-eHM"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -168,7 +171,10 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="place location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HMy-QU-Xld">
                                                             <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="dvt-tn-VZZ" id="QT4-ue-glG"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
@@ -200,7 +206,10 @@
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="type of place" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYi-KK-Ml1">
                                                             <rect key="frame" x="0.0" y="29" width="374" height="34"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="dvt-tn-VZZ" id="ZF7-AU-r02"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
