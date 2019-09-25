@@ -26,7 +26,7 @@ class MainViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+       
         return restaurants.count
     }
     
@@ -36,6 +36,8 @@ class MainViewController: UITableViewController {
         
         cell.placeName.text = restaurants[indexPath.row]
         cell.placeImage.image = UIImage(named: restaurants[indexPath.row])
+        cell.placeImage.layer.cornerRadius = cell.placeImage.frame.size.height / 2
+        cell.placeImage.clipsToBounds = true
         
         return cell
     }
@@ -49,5 +51,6 @@ class MainViewController: UITableViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
+    @IBAction func cancelBtn(_ segue:UIStoryboardSegue) {}
+
 }
