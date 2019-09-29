@@ -67,6 +67,7 @@
                                     <outlet property="placeLocation" destination="T5Q-f9-aOf" id="lBv-jB-Tip"/>
                                     <outlet property="placeName" destination="43Q-rv-hxo" id="cDU-AB-ztp"/>
                                     <outlet property="placeType" destination="y4n-Pg-1lm" id="HJP-o2-g4t"/>
+                                    <segue destination="dvt-tn-VZZ" kind="show" identifier="showDetail" id="zvo-Qs-7b5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -110,14 +111,14 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="C98-UC-jlw" secondAttribute="bottom" id="PEI-gQ-Iu3"/>
-                                                <constraint firstItem="C98-UC-jlw" firstAttribute="leading" secondItem="heU-Rh-olt" secondAttribute="leading" id="T3L-eK-PzW"/>
-                                                <constraint firstItem="C98-UC-jlw" firstAttribute="top" secondItem="heU-Rh-olt" secondAttribute="top" id="XjV-sV-T0M"/>
-                                                <constraint firstAttribute="trailing" secondItem="C98-UC-jlw" secondAttribute="trailing" id="qr4-bn-IFN"/>
+                                                <constraint firstAttribute="bottom" secondItem="C98-UC-jlw" secondAttribute="bottom" id="Ex6-fk-spJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="C98-UC-jlw" secondAttribute="trailing" id="PD2-8O-qMP"/>
+                                                <constraint firstItem="C98-UC-jlw" firstAttribute="top" secondItem="heU-Rh-olt" secondAttribute="top" id="W9o-xV-vJT"/>
+                                                <constraint firstItem="C98-UC-jlw" firstAttribute="leading" secondItem="heU-Rh-olt" secondAttribute="leading" id="uPb-p3-ibq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="6bs-KC-1pE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="85" id="6bs-KC-1pE">
                                         <rect key="frame" x="0.0" y="278" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6bs-KC-1pE" id="Ke2-80-ZxH">
@@ -152,7 +153,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="f2Y-1Y-tOx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="85" id="f2Y-1Y-tOx">
                                         <rect key="frame" x="0.0" y="363" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f2Y-1Y-tOx" id="Brg-b5-2eQ">
@@ -187,7 +188,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="a3G-b1-v40">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="85" id="a3G-b1-v40">
                                         <rect key="frame" x="0.0" y="448" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a3G-b1-v40" id="ua9-4c-MwI">
@@ -233,16 +234,27 @@
                     <navigationItem key="navigationItem" title="New Place" id="I8l-NL-qcR">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xFm-kc-l3J">
                             <connections>
-                                <segue destination="yXe-d5-BxI" kind="unwind" unwindAction="cancelBtn:" id="JfP-Xm-5CS"/>
+                                <action selector="cancelAction:" destination="dvt-tn-VZZ" id="g7G-Ho-p4z"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="K0F-aL-RGB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="K0F-aL-RGB">
+                            <connections>
+                                <segue destination="yXe-d5-BxI" kind="unwind" unwindAction="unwindSegue:" id="utY-dQ-c6v"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageOfPlace" destination="C98-UC-jlw" id="YVF-Z3-Z92"/>
+                        <outlet property="locationOfPlace" destination="HMy-QU-Xld" id="zQx-Gs-UTU"/>
+                        <outlet property="nameOfPlace" destination="ajt-8z-SN5" id="k4X-ok-R7S"/>
+                        <outlet property="saveBtn" destination="K0F-aL-RGB" id="sNS-qZ-u06"/>
+                        <outlet property="typeOfPlace" destination="SYi-KK-Ml1" id="FfU-df-in6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgW-Mt-Ff6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yXe-d5-BxI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1955" y="-269"/>
+            <point key="canvasLocation" x="1193" y="-269"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HDY-ex-Pyc">
@@ -279,11 +291,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Icz-hd-XjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1219" y="-269"/>
+            <point key="canvasLocation" x="1154" y="-984"/>
         </scene>
     </scenes>
     <resources>
         <image name="photo" width="170" height="170"/>
         <image name="Шляпа Свиньи" width="266.5" height="266.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zvo-Qs-7b5"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -14,6 +14,7 @@
 		50017EF52338C3E00003D372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50017EF32338C3E00003D372 /* LaunchScreen.storyboard */; };
 		50017EFD2338C7450003D372 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50017EFC2338C7450003D372 /* MainViewController.swift */; };
 		50017EFF2338D0C40003D372 /* MainVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50017EFE2338D0C40003D372 /* MainVCCell.swift */; };
+		50AEB9F9233E337D00FF6A9B /* Restauraunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AEB9F8233E337D00FF6A9B /* Restauraunt.swift */; };
 		50DFF472233B775800260695 /* NewPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DFF471233B775800260695 /* NewPlaceVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		50017EF62338C3E00003D372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50017EFC2338C7450003D372 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		50017EFE2338D0C40003D372 /* MainVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCCell.swift; sourceTree = "<group>"; };
+		50AEB9F8233E337D00FF6A9B /* Restauraunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restauraunt.swift; sourceTree = "<group>"; };
 		50DFF471233B775800260695 /* NewPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 			children = (
 				50017EE82338C3DA0003D372 /* AppDelegate.swift */,
 				50017EEA2338C3DA0003D372 /* SceneDelegate.swift */,
+				50AEB9F8233E337D00FF6A9B /* Restauraunt.swift */,
 				50017EFE2338D0C40003D372 /* MainVCCell.swift */,
 				50017EFC2338C7450003D372 /* MainViewController.swift */,
 				50DFF471233B775800260695 /* NewPlaceVC.swift */,
@@ -148,6 +151,7 @@
 				50017EFF2338D0C40003D372 /* MainVCCell.swift in Sources */,
 				50017EE92338C3DA0003D372 /* AppDelegate.swift in Sources */,
 				50DFF472233B775800260695 /* NewPlaceVC.swift in Sources */,
+				50AEB9F9233E337D00FF6A9B /* Restauraunt.swift in Sources */,
 				50017EEB2338C3DA0003D372 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "New Places/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "New Places/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
